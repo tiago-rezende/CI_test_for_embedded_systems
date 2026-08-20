@@ -1,0 +1,12 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"name": "platformio_test",
+			"path": "platformio_test"
+		}
+	],
+	"settings": {}
+}
