@@ -1,6 +1,7 @@
 #include "adc_driver.h"
+#include "main.h"
 
-static ADC_HandleTypeDef *adc_handle;
+static ADC_HandleTypeDef *adc_handle = NULL;
 
 void ADC_Driver_Init(ADC_HandleTypeDef *hadc)
 {

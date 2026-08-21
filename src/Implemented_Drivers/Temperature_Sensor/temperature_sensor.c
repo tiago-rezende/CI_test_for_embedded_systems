@@ -3,10 +3,6 @@
 
 static float TemperatureSensor_ConvertToCelsius(uint32_t adc_value);
 
-void TemperatureSensor_Init(void)
-{
-}
-
 float TemperatureSensor_Read(void)
 {
     uint32_t adc_value;
