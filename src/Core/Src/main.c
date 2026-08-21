@@ -21,7 +21,7 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-#include "application.h"
+#include "Application.h"
 #include "uart_driver.h"
 #include "adc_driver.h"
 /* USER CODE END Includes */
