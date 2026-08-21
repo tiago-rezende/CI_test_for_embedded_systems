@@ -22,6 +22,8 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include "application.h"
+#include "uart_driver.h"
+#include "adc_driver.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -98,7 +100,6 @@ int main(void)
   /* USER CODE BEGIN 2 */
   UART_Driver_Init(&huart1);
   ADC_Driver_Init(&hadc1);
-  TemperatureSensor_Init();
   Application_Init();
   /* USER CODE END 2 */
 
