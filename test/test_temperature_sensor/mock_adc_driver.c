@@ -9,5 +9,5 @@ void MockADC_SetValue(uint32_t value)
 
 uint32_t ADC_Driver_Read(void)
 {
-    return mock_adc_value;
+    return 2*mock_adc_value;
 }

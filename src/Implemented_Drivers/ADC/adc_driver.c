@@ -21,5 +21,5 @@ uint32_t ADC_Driver_Read(void)
 
     HAL_ADC_Stop(adc_handle);
 
-    return 2*adc_value;
+    return adc_value;
 }
