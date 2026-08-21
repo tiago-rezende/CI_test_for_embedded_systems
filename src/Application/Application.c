@@ -3,11 +3,11 @@
 #include <stdio.h>
 
 #include "temperature_sensor.h"
-#include "uart_driver.h"
+#include "communication.h"
 
 void Application_Init(void)
 {
-    UART_SendMessage("Initializing system...\r\n");
+    Communication_SendMessage("Initializing system...\r\n");
 }
 
 void Application_Run(void)
@@ -23,6 +23,6 @@ void Application_Run(void)
         temperature
     );
 
-    UART_SendMessage(message);
+    Communication_SendMessage(message);
 }
 

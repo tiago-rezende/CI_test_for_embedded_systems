@@ -97,7 +97,8 @@ int main(void)
   MX_USART1_UART_Init();
   /* USER CODE BEGIN 2 */
   UART_Driver_Init(&huart1);
-  TemperatureSensor_Init(&hadc1);
+  ADC_Driver_Init(&hadc1);
+  TemperatureSensor_Init();
   Application_Init();
   /* USER CODE END 2 */
 
