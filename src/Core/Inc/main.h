@@ -53,8 +53,7 @@ extern "C" {
 void Error_Handler(void);
 
 /* USER CODE BEGIN EFP */
-float TemperatureSensor_Read(void);
-void UART_SendMessage(const char *message);
+
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/

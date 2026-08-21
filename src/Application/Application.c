@@ -2,8 +2,8 @@
 
 #include <stdio.h>
 
-// #include "temperature_sensor.h"
-// #include "uart_driver.h"
+#include "temperature_sensor.h"
+#include "uart_driver.h"
 
 void Application_Init(void)
 {
@@ -25,3 +25,4 @@ void Application_Run(void)
 
     UART_SendMessage(message);
 }
+

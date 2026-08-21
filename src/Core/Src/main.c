@@ -22,8 +22,6 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include "application.h"
-#include <stdio.h>
-#include <string.h>
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -98,6 +96,8 @@ int main(void)
   MX_ADC1_Init();
   MX_USART1_UART_Init();
   /* USER CODE BEGIN 2 */
+  UART_Driver_Init(&huart1);
+  TemperatureSensor_Init(&hadc1);
   Application_Init();
   /* USER CODE END 2 */
 
@@ -294,34 +294,6 @@ static void MX_GPIO_Init(void)
 }
 
 /* USER CODE BEGIN 4 */
-
-float TemperatureSensor_Read(void)
-{
-    uint32_t adc_value = 0;
-
-    HAL_ADC_Start(&hadc1);
-
-    if (HAL_ADC_PollForConversion(&hadc1, 10) == HAL_OK)
-    {
-        adc_value = HAL_ADC_GetValue(&hadc1);
-    }
-
-    HAL_ADC_Stop(&hadc1);
-
-    // ADC 0 -> -10 °C
-    // ADC 4095 -> 150 °C
-    return -10.0f + ((float)adc_value * 160.0f / 4095.0f);
-}
-
-void UART_SendMessage(const char *message)
-{
-    HAL_UART_Transmit(
-        &huart1,
-        (uint8_t *)message,
-        strlen(message),
-        100
-    );
-}
 
 /*USER CODE END 4 */
 
