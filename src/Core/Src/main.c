@@ -24,6 +24,7 @@
 #include "Application.h"
 #include "uart_driver.h"
 #include "adc_driver.h"
+
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
